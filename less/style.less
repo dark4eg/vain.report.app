@@ -1,0 +1,157 @@
+@import "config";
+
+html,
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0 !important;
+  height: 100%;
+
+  #app {
+    height: 100%;
+
+    .app {
+      height: 100%;
+
+      a {
+        text-decoration: none;
+        color: #607D8B;
+      }
+
+      header {
+        background-color: #000000;
+        height: @headerHeight;
+
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        //color: #fff;
+
+        .logo {
+          position: absolute;
+          left: calc(50% ~"-" ~"37.5px");
+          top: 12px;
+        }
+      }
+
+      main {
+        min-height: calc(100% ~"-" @headerHeight ~"-" @footerHeight);
+        //min-height: calc(100% ~"-" @headerHeight);
+
+        .page-loading {
+          position:absolute;
+          top:0; bottom:0;
+          left:0; right:0;
+          margin:auto;
+        }
+
+        .page-partial-loading {
+          margin-top: 100px;
+          margin-bottom: 50px;
+        }
+
+        .row {
+          width: 100%;
+          margin-right: 0;
+          margin-left: 0;
+
+          h3 {
+            text-transform: uppercase;
+          }
+
+          .hero-hr-list {
+            padding-right: 0;
+            padding-left: 0;
+          }
+
+          //.finded-player {
+          //  float: left;
+          //}
+
+          .content-scroll-wrap {
+            overflow: hidden;
+            overflow-x: scroll;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+          }
+
+          div.search-wrapper {
+            //padding:1px 6px 1px 1px;
+            display:inline-block;
+            width: 200px;
+
+            input.search-player {
+              border: none;
+              padding: 10px 20px 10px 10px;
+              font-size: 1.2em;
+              position: relative;
+              width: 185px;
+            }
+
+            span {
+              cursor: pointer;
+              color: #000;
+              font-weight: bold;
+              font-size: 1.2em;
+              //visibility: hidden;
+              position: relative;
+              left: 102px;
+              top: -35px;
+            }
+
+            input.search-player::-webkit-input-placeholder       {text-indent: 0px;   transition: text-indent 0.4s ease;}
+            input.search-player::-moz-placeholder                {text-indent: 0px;   transition: text-indent 0.4s ease;}
+            input.search-player:-moz-placeholder                 {text-indent: 0px;   transition: text-indent 0.4s ease;}
+            input.search-player:-ms-input-placeholder            {text-indent: 0px;   transition: text-indent 0.4s ease;}
+            input.search-player:focus::-webkit-input-placeholder {text-indent: 500px; transition: text-indent 0.4s ease;}
+            input.search-player:focus::-moz-placeholder          {text-indent: 500px; transition: text-indent 0.4s ease;}
+            input.search-player:focus:-moz-placeholder           {text-indent: 500px; transition: text-indent 0.4s ease;}
+            input.search-player:focus:-ms-input-placeholder      {text-indent: 500px; transition: text-indent 0.4s ease;}
+
+            input.search-player:focus {
+              border: none !important;
+              //background-color: yellow;
+              //background: blue;
+            }
+          }
+
+          .line {
+            margin-bottom: 15px;
+            font-weight: bold;
+
+            .title {
+              float: left;
+            }
+            .value {
+              float: right;
+            }
+          }
+
+          .line-search-result {
+            margin-bottom: 15px;
+          }
+
+          .table-title {
+            font-weight: bold;
+          }
+
+          .best-hero-player {
+            font-weight: bold;
+            margin-bottom: 20px;
+          }
+
+          .hero-stats {
+            margin-top: 18.72px;
+          }
+        }
+      }
+
+      footer {
+        margin-top: 100px;
+        background-color: #000000;
+        height: @footerHeight;
+      }
+    }
+  }
+}
